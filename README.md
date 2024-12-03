@@ -13,3 +13,5 @@
 4. Pre-Existing Packages
 - maze_solver (GitHub repository: joewong00/maze_solver) ->link https://github.com/joewong00/maze_solver
 - This package was used to facilitate maze generation and parsing functionalities. The existing code provided utility functions to create mazes of various complexities and to represent the maze as a graph structure, which was essential for implementing and testing the Q-learning and A* algorithms in this project. By leveraging this package, I was able to focus on developing and enhancing the hybrid pathfinding logic without needing to implement maze generation from scratch.
+5. Easy to find algorithms
+- src/maze_solver/script/algorithms
