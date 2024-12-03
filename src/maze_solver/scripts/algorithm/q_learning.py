@@ -3,14 +3,14 @@ import random
 
 class QLearning:
     def __init__(self, maze, alpha=0.1, gamma=0.9, epsilon=1.0, epsilon_decay=0.99, min_epsilon=0.1, episodes=1500):
-        self.maze = maze  # The maze object representing the environment
+        self.maze = maze  
         self.alpha = alpha  # Learning rate: controls how much the Q-value is updated
         self.gamma = gamma  # Discount factor: determines the importance of future rewards
-        self.epsilon = epsilon  # Exploration rate: probability of choosing a random action
-        self.epsilon_decay = epsilon_decay  # Rate at which epsilon decreases over episodes
-        self.min_epsilon = min_epsilon  # Minimum value for epsilon
-        self.episodes = episodes  # Number of episodes for training
-        self.q_table = {}  # Q-table to store Q-values for each state-action pair
+        self.epsilon = epsilon  
+        self.epsilon_decay = epsilon_decay  
+        self.min_epsilon = min_epsilon  
+        self.episodes = episodes  
+        self.q_table = {} 
         self.init_q_table()  # Initialize Q-table
 
     def init_q_table(self):
@@ -21,7 +21,7 @@ class QLearning:
     def choose_action(self, state):
         # Choose an action based on epsilon-greedy policy
         if random.uniform(0, 1) < self.epsilon:
-            return random.choice([0, 1, 2, 3])  # Random action (exploration)
+            return random.choice([0, 1, 2, 3])  
         return np.argmax(self.q_table[state])  # Best action based on Q-table (exploitation)
 
     def update_q_value(self, state, action, reward, next_state):
