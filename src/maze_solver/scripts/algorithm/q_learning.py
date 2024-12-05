@@ -58,10 +58,6 @@ class QLearning:
         print("Training completed. Extracting optimal path...")
         return self.extract_path()  # Extract the optimal path after training
 
-    def update_start(self, new_start_position):
-        # Update the starting position of the maze
-        self.maze.start = self.maze.get_node(new_start_position)
-
     def take_action(self, state, action):
         # Perform an action in the maze and return the resulting state and reward
         node = self.maze.get_node(state)  # Get the current node
